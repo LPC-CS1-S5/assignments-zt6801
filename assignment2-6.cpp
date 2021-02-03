@@ -1,8 +1,11 @@
 // Zhiqi Tang
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Write a program that  stores the following values in five different variables: 28, 32, 37, 24, 33
 // The program should first calculate the sum of these five variables and store the result in a separate variable named sum. Then, the program should divide the sum variable by 5 to get the average.
 // Display the sum and average with precision 3 on the screen.
+=======
+>>>>>>> origin/main
 =======
 >>>>>>> origin/main
 
@@ -10,7 +13,11 @@
 using namespace std;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 int main()
+=======
+int main () 
+>>>>>>> origin/main
 =======
 int main () 
 >>>>>>> origin/main
@@ -30,6 +37,7 @@ int main ()
   average = sum/5;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   cout << "The sum is " << sum;
   cout << " and the average is " << average;
 
@@ -37,10 +45,16 @@ int main ()
 
 }
 =======
+=======
+>>>>>>> origin/main
   cout << "The sum is "<< sum; 
   cout << " and the average is " << average;
   
   return 0;
   
+<<<<<<< HEAD
+  }
+>>>>>>> origin/main
+=======
   }
 >>>>>>> origin/main
