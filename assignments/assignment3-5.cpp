@@ -30,7 +30,7 @@ int main()
   cout << "The generated values are " << num1 << ", " << num2 << ", and " << num3 << ".";
 
   sum = (num1 + num2 + num3);
-  average= (num1 + num2 + num3)/3.0;
+  average= (num1 + num2 + num3) /3.0;
 
   cout << setprecision(2) << fixed;
   cout << " The summation of the 3 random numbers is " << sum << ", and the average is " << average << ". " << endl; 
