@@ -31,40 +31,40 @@ int main(){
   switch (choice)
   {
     case 1: 
-    cout << "What is the radius of the circle? ";
-    cin >> radius;
-    circle_area = (3.14159 * (radius * radius));
-    cout << "The area of the circle is " << circle_area << endl;
-    // Set a break between the choices
-    break;
+		cout << "What is the radius of the circle? ";
+		cin >> radius;
+		circle_area = (3.14159 * (radius * radius));
+		cout << "The area of the circle is " << circle_area << endl;
+		// Set a break between the choices
+		break;
 
     case 2:
-    cout << "What is the length of the rectangle? ";
-    cin >> length;
-    cout << "What is the width of the rectangle? ";
-    cin >> width;
-    rectangle_area = length * width;
-    cout << "The area of the rectangle is " << rectangle_area << endl;
-    break;
+		cout << "What is the length of the rectangle? ";
+		cin >> length;
+		cout << "What is the width of the rectangle? ";
+		cin >> width;
+		rectangle_area = length * width;
+		cout << "The area of the rectangle is " << rectangle_area << endl;
+		break;
 
     case 3: 
-    while (base > 0 && height > 0);
-    cout << "What is the triangle's base? ";
-    cin >> base;
-    cout << "What is the triangle's height? ";
-    cin >> height;
-    triangle_area = (base * height * 0.5);
-    cout << "The area of the triangle is " << triangle_area << endl;
-    break;
+		while (base > 0 && height > 0);
+		cout << "What is the triangle's base? ";
+		cin >> base;
+		cout << "What is the triangle's height? ";
+		cin >> height;
+		triangle_area = (base * height * 0.5);
+		cout << "The area of the triangle is " << triangle_area << endl;
+		break;
 
     case 4: 
-    cout << "Sorry! Please choose numbers 1-3 to find the area of a circle, rectangle or triangle." << endl;
-    break;
+		cout << "Sorry! Please choose numbers 1-3 to find the area of a circle, rectangle or triangle." << endl;
+		break;
 
     // Because the question says to have an error message
     default:
-    cout << "Please choose numbers 1-4 to use this calculator.";
-  
+		cout << "Please choose numbers 1-4 to use this calculator.";
+	
 
   }
 return 0;

@@ -1,4 +1,6 @@
 // Zhiqi Tang
+//**** Keep the indentation rules
+
 
 #include <iostream>
 #include <iomanip>
@@ -40,24 +42,24 @@ int main(){
     {
       cout << "We do not accept distances less than 10 miles or more than 3000 miles. These are the company's minimum and maximum shipping distances. " << endl;
     }
-  else 
-  {
-    // Calculate charges
-    if (weight <=2)
-    totalCharge = (distance/500) * 1.10;
-    else if (weight > 2 && weight <=6)
-    totalCharge = (distance/500) * 2.20;
-    else if (weight > 6 && weight <=10)
-    totalCharge = (distance/500) * 3.70;
-    else if (weight > 10 && weight <=20)
-    totalCharge = (distance/500) * 4.80;
+	else 
+	{
+		// Calculate charges
+		if (weight <=2)
+			totalCharge = (distance/500) * 1.10;
+		else if (weight > 2 && weight <=6)
+			totalCharge = (distance/500) * 2.20;
+		else if (weight > 6 && weight <=10)
+			totalCharge = (distance/500) * 3.70;
+		else if (weight > 10 && weight <=20)
+			totalCharge = (distance/500) * 4.80;
 
-    // Output formatting
-    cout << setprecision(2) << fixed;
-    // Display total charges
-    cout << "Total charges are $" << totalCharge << "." << endl;
+		// Output formatting
+		cout << setprecision(2) << fixed;
+		// Display total charges
+		cout << "Total charges are $" << totalCharge << "." << endl;
 
-  }
+	}
   }
 return 0;
 
