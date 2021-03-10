@@ -7,12 +7,13 @@ using namespace std;
 int main()
 {
   ofstream ofs;
-  int empID, N;
+  int empID;
+  int N;
   string empName;
   string depName;
   double salary;
 
-  ofs.open("employee.txt")
+  ofs.open("employee.txt");
   if (ofs.fail())
   {
     cerr << "File failed to open " << endl;
@@ -24,17 +25,24 @@ int main()
 
   ofs << N << endl;
 
-  for (int i = 0, i < N; i++)
+  for (int i = 0; i < N; i++)
   {
     cout << "Enter the employee's ID: ";
     cin >> empID;
-    ofs >> empID; 
+    ofs << empID << endl; 
     cout << "Enter the employee's name: ";
     cin >> empName;
-    ofs >> empName;
+    ofs << empName << endl;
     cout << "Enter the department name: ";
     cin >> depName;
-    ofs >> depName;
-    cout << ""
+    ofs << depName << endl;
+    cout << "Enter the salary: ";
+    cin >> salary;
+    ofs << salary << endl;
+
+    if (!ofs.fail())
+    cout << "Data written into file\n";
   }
+  ofs.close();
+  return 0;
 }
