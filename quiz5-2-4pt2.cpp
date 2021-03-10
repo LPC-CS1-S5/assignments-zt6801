@@ -29,7 +29,7 @@ int main()
   sum = 0;
   while (ifs >> empID >> empName >> depName >> salary)
   {
-    cout << empID << "\t" << empName << "\t" << depName << "\t\t\t" << salary << endl;
+    cout << empID << "\t" << empName << "\t" << depName << "\t\t" << salary << right << endl;
     
     i++;
     sum += salary;
