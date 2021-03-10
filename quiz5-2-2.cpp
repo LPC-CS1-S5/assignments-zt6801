@@ -11,26 +11,42 @@ int main()
 {
   // N to the power of M
   int N, M; 
+  int fnum;
 
+  // Get user input for the base
   cout << "Enter the base: ";
   cin >> N;
 
+  // Set up nested if condition to make sure the ranges apply to variables N and M
   if (N > 0 && N < 10)
   {
     cout << "Enter the power: ";
     cin >> M;
     if (M <= 10 && M >= 1)
     {
-      cout << N << " to the power of " << M << ": ";
+      cout << N << " to the power of " << M << " is ";
     }
     }
   else {
-    cout << "Please enter a value greater than 0 and less than 10 for the base and one to ten for the power. " << endl;
+    cout << "Please enter a value greater than zero and less than ten for the base and one to ten (including one and ten) for the power. " << endl;
   }
 
-  for (int i = 0; i < M, i++)
+  // Initialize the result
+  int result = 1;
+
+  // First number of the equation
+  fnum = (N / N);
+  // Print the first number of the equation
+  cout << fnum << " ";
+
+  // For loop to find the power-- i is less than M because we only want it to loop M times since I already used another equation to find the first value 
+  for (int i = 0; i < M; i++)
   {
-    
+
+   // This is 1 * N, and then it loops and then the result of 1 * N * N and so forth
+   result *= N;
+
+   cout << result << " ";
   }
 
 }
