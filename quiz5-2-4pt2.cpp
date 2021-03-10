@@ -24,12 +24,17 @@ int main()
   ifs >> N;
   cout << "There are " << N << " employees." << endl;
 
+  cout << "ID\t\t\t" << "Name\t" << "Department\t" << "Salary" << endl;
+
+  sum = 0;
   while (ifs >> empID >> empName >> depName >> salary)
   {
-    cout << "ID\t\t" << "Name\t\t" << "Department\t\t" << "Salary\t\t"
+    cout << empID << "\t" << empName << "\t" << depName << "\t\t\t" << salary << endl;
+    
     i++;
     sum += salary;
+    avg = (sum / N);
   }
 
-
+  cout << "\t\t\t\t\tTotal: " << sum << "\tAverage: " << avg << endl;
 }
