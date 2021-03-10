@@ -9,31 +9,51 @@ using namespace std;
 
 int main()
 {
-  int begin, end;
+  int begin, end, flag;
+  int j;
 
   cout << "Enter a minimum value for the range between 1 and 100: ";
   cin >> begin;
-  if (begin > 1 && begin < 100)
+
+    if (begin > 1 && begin < 100)
   {
     cout << "Enter a maximum value for the range between 1 and 100: ";
     cin >> end;
-    if (end < 100 && end > 0)
+  } 
+  if (begin < end)
     {
-      cout << "The prime numbers between " << begin << " and " << end << " are: ";
-    }
-  }
+      if (end < 100 && end > 0)
+      {
+        cout << "The prime numbers between " << begin << " and " << end << " are: ";
+      }
+      }
   else {
-    cout << "Please enter numbers between 1 and 100. " << endl;
+    cout << "Please enter numbers between 1 and 100 and/or make sure the minimum is smaller than the maximum. ";
   }
 
-  for (i = begin; i < end; i++)
-  {
-    
-  }
+    for (int i = begin; i < end; i++)
+    {
+      if (i == 0 || i == 1)
+      continue;
+
+        flag = 1;
+  
+      for (int j = 2; j <= (i / 2); j++)
+      {
+        if (i % j == 0)
+        {
+          flag = 0;
+          break;
+        }
+      }
+      if (flag == 1)
+      cout << i << " ";
+      }
+      return 0;
+      
+    }
 
 
 
-
-}
 
 
