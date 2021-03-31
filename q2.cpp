@@ -3,27 +3,33 @@
 Also at the last line, show the total number of students who have an average greater than 80 */ 
 
 #include <iostream>
+#include <fstream>
 using namespace std;
 
 int main()
 {
   string name;
-  int score1, score2;
+  int score1, score2, sum;
+  double avg;
+  int i;
 
   ifstream ifs;
   ifs.open("students.txt");
-  if (ifs,fail())
+  if (ifs.fail())
   {
     cerr << "File open error";
-    exit(0)
+    exit(0);
   }
 
   while (ifs >> name >> score1 >> score2)
   {
-    
+    cout << name << " has the scores " << score1 << " and " << score2 << endl;
+    i++;
+    sum = score1 + score2;
+
+    avg = (sum / 2.0);
+    cout << "Their sum: " << sum << endl;
+    cout << "Their average: " << avg << endl;
   }
-
-
-
 
 }
