@@ -11,7 +11,7 @@ int main()
   string name;
   int score1, score2, sum;
   double avg;
-  int i;
+  int i = 0;
 
   ifstream ifs;
   ifs.open("students.txt");
@@ -23,13 +23,17 @@ int main()
 
   while (ifs >> name >> score1 >> score2)
   {
-    cout << name << " has the scores " << score1 << " and " << score2 << endl;
-    i++;
+    cout << name << " has the scores: " << score1 << " and " << score2 << endl;
     sum = score1 + score2;
 
     avg = (sum / 2.0);
     cout << "Their sum: " << sum << endl;
     cout << "Their average: " << avg << endl;
-  }
 
+    if (avg > 80)
+    {
+      i++;
+    }
+  }
+  cout << i << " students have an average greater than 80. ";
 }
