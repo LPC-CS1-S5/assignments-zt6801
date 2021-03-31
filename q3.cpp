@@ -49,6 +49,5 @@ int getRdnum()
 
 int isGreater(int N)
 {
-  
-
+  for ()
 }
