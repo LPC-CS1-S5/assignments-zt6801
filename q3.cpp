@@ -47,14 +47,15 @@ int getRdnum()
 
   unsigned seed = time(0);
   srand(seed);
-  while (i < 9)
-  {
-    num = (rand() % (MAX_VALUE - MIN_VALUE +1) + MIN_VALUE);
-    i++;
-  }
+
+  num = (rand() % (MAX_VALUE - MIN_VALUE +1) + MIN_VALUE);
 }
 
 int isGreater(int N)
 {
-  N;
+  int num;
+  if (num > N)
+  return 1;
+  else 
+  return 0;
 }
