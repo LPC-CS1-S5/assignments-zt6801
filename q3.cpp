@@ -7,7 +7,6 @@ If so, the number will be written into the file "numbers.txt". */
 
 #include <iostream>
 #include <cstdlib>
-#include <ctime>
 #include <fstream>
 using namespace std;
 
@@ -17,8 +16,8 @@ int isGreater(int N);
 int main()
 {
   ofstream ofs;
-  int i;
-  int N;
+  int i = 1;
+  int N = 10;
   int num;
 
   ofs.open("numbers.txt");
@@ -28,27 +27,34 @@ int main()
     exit(0);
   }
 
-  for (i = 0; i < N; i++)
+  while (i <= 10)
   {
     getRdnum();
     if (isGreater(num))
     {
-      ofs << num;
+      ofs << num << endl;;
     }
+    i++;
   }
 }
 
 int getRdnum()
 {
   int num;
-  int i = 0;
+  int N = 10;
   int MIN_VALUE = 1;
   int MAX_VALUE = 50;
 
   unsigned seed = time(0);
   srand(seed);
 
-  num = (rand() % (MAX_VALUE - MIN_VALUE +1) + MIN_VALUE);
+   for (int i = 0; i < N; i++)
+   {
+     num = (rand() % 100);
+   }
+
+  cout << num << endl;
+  return 0;
 }
 
 int isGreater(int N)
