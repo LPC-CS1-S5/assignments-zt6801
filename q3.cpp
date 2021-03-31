@@ -3,8 +3,6 @@ We are going to make N(defined as 10) random numbers that should be between 1 to
 When each number is generated, we check the number that is greater than the preceding number. 
 If so, the number will be written into the file "numbers.txt". */ 
 
-// close ofs. maybe later
-// come back
 
 #include <iostream>
 #include <cstdlib>

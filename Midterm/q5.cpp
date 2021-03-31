@@ -20,14 +20,15 @@ int main()
     exit(0);
   }
 
-  while(1)
-  {
-    getInput(num1, num2);
-    if (isSame(num1, num2))
-    break;
-    div = Division(num1, num2);
-    fileWrite(ofs, div);
-  }
+    while (1)
+    {
+		getInput(num1, num2);
+		if (isSame(num1, num2))
+			break;
+		div = Division(num1, num2);
+		cout << "div " << div << endl;
+		fileWrite(ofs, div);
+    }
 }
 
 void getInput (int &num1, int &num2)
@@ -39,9 +40,9 @@ void getInput (int &num1, int &num2)
 int isSame(int num1, int num2)
 {
   if (num1 == num2)
-  exit(0);
+  return 1;
   else
-  return num1, num2; 
+  return 0; 
 }
 
 int Division(int n1, int n2)
@@ -58,6 +59,7 @@ int Division(int n1, int n2)
 void fileWrite (ofstream &ofs, int div)
 {
   ofs << div << endl;
+		cout << "filewirte div " << div << endl;
   if (ofs.fail())
   {
     cerr << "File Write Error ";
