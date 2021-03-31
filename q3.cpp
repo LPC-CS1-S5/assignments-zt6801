@@ -4,6 +4,7 @@ When each number is generated, we check the number that is greater than the prec
 If so, the number will be written into the file "numbers.txt". */ 
 
 // close ofs. maybe later
+// come back
 
 #include <iostream>
 #include <cstdlib>
@@ -11,14 +12,17 @@ If so, the number will be written into the file "numbers.txt". */
 using namespace std;
 
 int getRdnum(void);
-int isGreater(int N);
+int isGreater(int &);
 
 int main()
 {
-  ofstream ofs;
   int i = 1;
-  int N = 10;
   int num;
+
+  ofstream ofs;
+
+  unsigned seed = time(0);
+  srand(seed);
 
   ofs.open("numbers.txt");
   if (ofs.fail())
@@ -32,7 +36,7 @@ int main()
     getRdnum();
     if (isGreater(num))
     {
-      ofs << num << endl;;
+      ofs << num << endl;
     }
     i++;
   }
@@ -41,27 +45,21 @@ int main()
 int getRdnum()
 {
   int num;
-  int N = 10;
   int MIN_VALUE = 1;
   int MAX_VALUE = 50;
 
   unsigned seed = time(0);
   srand(seed);
 
-   for (int i = 0; i < N; i++)
-   {
-     num = (rand() % 100);
-   }
-
-  cout << num << endl;
-  return 0;
+  num = (rand() % 50);
 }
 
-int isGreater(int N)
+int isGreater(int &N)
 {
-  int num;
-  if (num > N)
-  return 1;
-  else 
-  return 0;
+  static int prec = 0;
+
+  if (N > prec) 
+    return 1;
+  if (N < prec) 
+    return 0;
 }
