@@ -36,4 +36,6 @@ int main()
     }
   }
   cout << i << " students have an average greater than 80. ";
+  
+  ifs.close();
 }
