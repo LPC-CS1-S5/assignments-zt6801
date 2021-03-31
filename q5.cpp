@@ -1,9 +1,10 @@
 #include <iostream>
+#include <fstream>
 using namespace std;
 
-void getInput (int &, int &)
-int isSame (int, int)
-int Division (int &, int &)
+void getInput(int &, int &);
+int isSame(int, int);
+int Division(int, int);
 void fileWrite(ofstream &, int);
 
 int main()
@@ -21,11 +22,11 @@ int main()
 
   while(1)
   {
-    getinput(num1, num2);
+    getInput(num1, num2);
     if (isSame(num1, num2))
     break;
     div = Division(num1, num2);
-    writefile(ofs, div);
+    fileWrite(ofs, div);
   }
 }
 
@@ -37,19 +38,19 @@ void getInput (int &num1, int &num2)
 
 int isSame(int num1, int num2)
 {
-  if (n1 == n2)
-  return 1;
+  if (num1 == num2)
+  exit(0);
   else
-  return 0;
+  return num1, num2; 
 }
 
-int Division(int &n1, int &n2)
+int Division(int n1, int n2)
 {
-  div;
+  int div;
   if (n1 > n2)
     div = (n1 / n2);
     return div;
-  else
+  if (n2 > n1)
     div = (n2 / n1);
     return div;
 }
