@@ -3,9 +3,11 @@ We are going to make N(defined as 10) random numbers that should be between 1 to
 When each number is generated, we check the number that is greater than the preceding number. 
 If so, the number will be written into the file "numbers.txt". */ 
 
+// close ofs. maybe later
+
 #include <iostream>
-#include <srand>
-#include <time>
+#include <cstdlib>
+#include <ctime>
 #include <fstream>
 using namespace std;
 
@@ -15,6 +17,9 @@ int isGreater(int N);
 int main()
 {
   ofstream ofs;
+  int i;
+  int N;
+  int num;
 
   ofs.open("numbers.txt");
   if (ofs.fail())
@@ -23,31 +28,33 @@ int main()
     exit(0);
   }
 
-  int isGreater();
-
-  for (i = 0, i < N, i++)
+  for (i = 0; i < N; i++)
   {
     getRdnum();
     if (isGreater(num))
     {
-      ofs >> num;
+      ofs << num;
     }
   }
-  ofs.close();
 }
 
 int getRdnum()
 {
   int num;
+  int i = 0;
   int MIN_VALUE = 1;
-      MAX_ VALUE = 50;
+  int MAX_VALUE = 50;
 
   unsigned seed = time(0);
   srand(seed);
-  num = (rand() % (MAX_VALUE - MIN_VALUE +1 ) + MIN_VALUE)
+  while (i < 9)
+  {
+    num = (rand() % (MAX_VALUE - MIN_VALUE +1) + MIN_VALUE);
+    i++;
+  }
 }
 
 int isGreater(int N)
 {
-  for ()
+  N;
 }
