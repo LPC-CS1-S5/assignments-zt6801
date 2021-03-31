@@ -38,18 +38,18 @@ int main()
     }
     i++;
   }
+  ofs.close();
 }
 
 int getRdnum()
 {
   int num;
-  int MIN_VALUE = 1;
-  int MAX_VALUE = 50;
 
   unsigned seed = time(0);
   srand(seed);
 
   num = (rand() % 50);
+  return num;
 }
 
 int isGreater(int &N)
@@ -61,3 +61,5 @@ int isGreater(int &N)
   if (N < prec) 
     return 0;
 }
+
+// In this first function/ main function, I made a while loop for it to run 10 times to get the random numbers. In my random numbers function, I first used num = rand() % max value - min value + 1, but then decided to use 50%. In the third function, I was confused until you showed how to do it to Parth. 
