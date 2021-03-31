@@ -1,47 +1,65 @@
-/* Generate a random number between 1 to 100. We are going to use the function getRdnum() with overloaded parameters. */
-
 #include <iostream>
-#include <ctime>
-#include <cstdlib>
 using namespace std;
 
-int getRdnum();
-int getRdnum(int);
-int getRdnum(int, int);
+void getInput (int &, int &)
+int isSame (int, int)
+int Division (int &, int &)
+void fileWrite(ofstream &, int);
 
 int main()
 {
-  int n1 = 10;
-  int n2 = 50;
-  int rand;
-  srand(time(0));
+  int num1, num2;
+  int div;
 
-  getRdnum(); // Between 1 and 100
-  cout << getRdnum() << endl;
-  getRdnum(n2); // Between 1 and 50
-  cout << getRdnum(n2) << endl;
-  getRdnum(n1, n2); // Between 10 and 50
-  cout << getRdnum(n1, n2) << endl;
+  ofstream ofs;
+  ofs.open("question5.txt");
+  if (ofs.fail())
+  {
+    cerr << "File Open Error";
+    exit(0);
+  }
 
+  while(1)
+  {
+    getinput(num1, num2);
+    if (isSame(num1, num2))
+    break;
+    div = Division(num1, num2);
+    writefile(ofs, div);
+  }
 }
 
-int getRdnum()
+void getInput (int &num1, int &num2)
 {
-  return (rand() % 100);
+  cout << "Enter two numbers: ";
+  cin >> num1 >> num2;
 }
 
-int getRdnum(int n2)
+int isSame(int num1, int num2)
 {
-  int MIN_VALUE = 1;
-  n2 = (rand() % (n2 - MIN_VALUE +1) +MIN_VALUE);
-  return n2;
+  if (n1 == n2)
+  return 1;
+  else
+  return 0;
 }
 
-int getRdnum (int n1, int n2)
+int Division(int &n1, int &n2)
 {
-  int num;
-  n1 += 1;
-  num = (rand() % (n2 - n1 + 1) + n1);
-  return num;
+  div;
+  if (n1 > n2)
+    div = (n1 / n2);
+    return div;
+  else
+    div = (n2 / n1);
+    return div;
 }
 
+void fileWrite (ofstream &ofs, int div)
+{
+  ofs << div << endl;
+  if (ofs.fail())
+  {
+    cerr << "File Write Error ";
+    exit(0);
+  }
+}
