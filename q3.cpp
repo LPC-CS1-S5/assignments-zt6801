@@ -49,6 +49,7 @@ int findMin(int n1, int n2, int n3) // findMin function and don't need reference
 void printResult(int n1, int n2, int n3, int min) // printResult function 
 {
   cout << "The random numbers are: " << n1 << setw(5) << n2 << setw(5) << n3 << endl; // Using the function getRandnum which was sent to the main and then here, we are able to print out the numbers we got
-  cout << "The min value is: " << min << endl; // Printing out min from findMin sent to 
+  cout << "The min value is: " << min << endl; // Printing out min from findMin sent to main and then here
 }
 
+// Done !
