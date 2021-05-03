@@ -18,7 +18,7 @@ int main()
       cout << "abs value of " << number[i] << " - " << number[i+1] << " = " << number[i] - number[i+1] << " is less than 10\n";
     }
     }
-    if (i != 0)
+    else if (i == 9)
     {
       if (abs(number[i]-number[i-1]) < 10)
     {
