@@ -12,8 +12,8 @@ int main()
 {
   int number[N] = {10, 15, 0, -25, 19, 20, 25, 30, 45, 20};
 
-  int from;
-  int to;
+  int from = 0;
+  int to = N-1;
 
   findmax(number, from, to);
   cout << "The max in the first half is: " << from << endl;
@@ -25,7 +25,7 @@ int findmax(int num[], int from, int to)
 {
   int max = 0;
   int fmax = 0;
-  for(int i = 0; i <= N/2-1; i++)
+  for(int i = from; i <= to/2; i++)
   {
     if (max < num[i])
     {
@@ -33,8 +33,7 @@ int findmax(int num[], int from, int to)
     }
   }
   cout << max << endl;
-  from = max;
-  for(int i = N/2; i < N-1; i++)
+  for(int i = to/2; i < to; i++)
   {
     if(fmax < num[i])
     {
@@ -42,6 +41,5 @@ int findmax(int num[], int from, int to)
     }
   }
   cout << fmax << endl;
-  to = fmax;
-  return from, to;
+  return max, fmax;
 }
