@@ -21,6 +21,10 @@ int main()
     {
       cout << "abs value of " << number[i] << " - " << number[i+1] << " is less than 10\n";
     }
+  }
+  }
+  for(int i = 9; i > 0; i++)
+  {
     if (abs(number[i]-number[i-1]) < 10)
     {
       cout << "abs value of " << number[i] << " - " << number[i-1] << " is less than 10\n";
@@ -32,7 +36,6 @@ int main()
         cout << "abs value of " << number[i] << " - " << number[i-1] << " is less than 10\n";
     }
     }
-  }
   }
 }
 
