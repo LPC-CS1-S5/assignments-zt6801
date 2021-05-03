@@ -15,35 +15,22 @@ int main()
   int from = 0;
   int to = N-1;
   int max;
-  int fmax;
 
   
   max = findmax(number, from, to);
-  cout << "The max in the first half is: " << max << endl;
-  fmax = findmax(number, from, to);
-  cout << "The max in the second half is: " << max << endl;
+  cout << max << endl;
+
 
 }
 
 int findmax(int num[], int from, int to)
 {
   int max = 0;
-  int fmax = 0;
-  for(int i = from; i <= to/2; i++)
+  for(int i = 0; i < N/2; i++)
   {
     if (max < num[i])
     {
       max = num[i];
     }
   }
-  cout << max << endl;
-  for(int i = to/2; i < to; i++)
-  {
-    if(fmax < num[i])
-    {
-      fmax = num[i];
-    }
-  }
-  cout << fmax << endl;
-  return max, fmax;
 }
