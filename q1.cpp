@@ -11,15 +11,14 @@ int main()
 
   for(int i = 0; i < N; i++)
   {
-    if(i == 0)
-    {
-      if (abs())
-    }
     if(abs(number[i]-number[i+1]) < 10)
     {
-      cout << number[i] << " and " << number[i+1] << " are less than 10\n";
+      cout << "abs value of " << number[i] << " - " << number[i+1] << " is less than 10\n";
+    }
+    if(abs(number[i]-number[i-1]) < 10)
+    {
+      cout << "abs value of " << number[i] << " - " << number[i-1] << " is less than 10\n";
     }
   }
+  }
 
-
-}
