@@ -8,7 +8,6 @@ int main()
 {
   const int N = 10;
   int number[N] = {10, 15, 0, -25, 19, 20, 25, 30, 45, 20};
-  int pos[N];
   for(int i = 0; i < N; i++)
   {
     if (i != 9)
@@ -24,7 +23,7 @@ int main()
       if (abs(number[i]-number[i-1]) < 10)
     {
       cout << "abs value of " << number[i] << " - " << number[i-1] << " = " << number[i] - number[i-1] << " is less than 10\n";
-      cout << "The first element is " << number[i] << endl;
+      cout << "The first element is " << number[i-1] << endl;
     }
     }
   }
