@@ -11,31 +11,20 @@ int main()
 
   for(int i = 0; i < N; i++)
   {
-    if ( i == 0)
+    if (i != 9)
     {
       if (abs(number[i]-number[i+1]) < 10)
-      {
-        cout << "abs value of " << number[i] << " - " << number[i+1] << " is less than 10\n";
-    }
-    if (abs(number[i]-number[i+1]) < 10)
     {
-      cout << "abs value of " << number[i] << " - " << number[i+1] << " is less than 10\n";
+      cout << "abs value of " << number[i] << " - " << number[i+1] << " = " << number[i] - number[i+1] << " is less than 10\n";
     }
-  }
-  }
-  for(int i = 9; i > 0; i++)
-  {
-    if (abs(number[i]-number[i-1]) < 10)
+    }
+    if (i != 0)
+    {
+      if (abs(number[i]-number[i-1]) < 10)
     {
       cout << "abs value of " << number[i] << " - " << number[i-1] << " is less than 10\n";
     }
-    if ( i == 9)
-    {
-      if(abs(number[i]-number[i-1]) < 10)
-      {
-        cout << "abs value of " << number[i] << " - " << number[i-1] << " is less than 10\n";
-    }
     }
   }
-}
+  }
 
