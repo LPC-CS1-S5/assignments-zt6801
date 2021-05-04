@@ -38,12 +38,11 @@ void deleteone(vector<int> &vec)
       vector<int>::iterator iter;
       
       iter = find(vec.begin(), vec.end(), usernum);
-      for(int v : vec)
+      if (iter != vec.end() && usernum)
       {
-        
-      }
-      if (iter != vec.end())
         vec.erase(iter);
+        deletecnt++;
+      }
       
       cout << usernum << "is deleted " << deletecnt << " times \n";
     	printvector(vec);
