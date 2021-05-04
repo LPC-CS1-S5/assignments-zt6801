@@ -14,23 +14,33 @@ int main()
 
   int from = 0;
   int to = N-1;
-  int max;
+  int max[N];
 
   
-  max = findmax(number, from, to);
-  cout << max << endl;
-
+  findmax(number, from, to);
 
 }
 
 int findmax(int num[], int from, int to)
 {
   int max = 0;
-  for(int i = 0; i < N/2; i++)
+  for(int i = from; i < to; i++)
   {
-    if (max < num[i])
-    {
-      max = num[i];
+    while (i < N/2-1)
+      {
+        if (max < num[i])
+        {
+          max = num[i];
+        }
+      }
+    while (i > N/2)
+      {
+        if (max < num[i])
+        {
+          max = num[i];
+        }
+      }
     }
+    cout << max;
+    return max;
   }
-}
