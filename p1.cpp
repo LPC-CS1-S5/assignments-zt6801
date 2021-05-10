@@ -8,6 +8,8 @@
 #include <cstring>
 using namespace std;
 
+bool occurence(char [], char []);
+
 int main()
 {
   char th[5] = "th";
@@ -27,7 +29,26 @@ int main()
     {
       int len;
       len = strlen(read);
+      for(int i = 0; i < len; i++)
+      {
+        if(isupper(read[i]))
+        {
+          read[i] = tolower(read[i]);
+        }
+      }
+      if (occurence(read, th))
+      {
+        cout << read << " " << th << endl;
+      }
     }
+  }
+}
+
+bool occurence(char read[], char th[])
+{
+  if(strstr(read, th) == 0)
+  {
+    return true;
   }
 
 }
