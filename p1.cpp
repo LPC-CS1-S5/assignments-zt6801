@@ -6,6 +6,7 @@
 #include <iostream>
 #include <fstream>
 #include <cstring>
+#include <cctype>
 using namespace std;
 
 bool occurence(char [], char []);
@@ -15,6 +16,7 @@ int main()
   char th[5] = "th";
   char read[20];
   ifstream ifs;
+  int cnt = 0;
 
   ifs.open("python.txt");
   if (ifs.fail())
@@ -39,21 +41,22 @@ int main()
       if (occurence(read, th))
       {
         cout << read << " " << th << endl;
+        cnt++;
       }
     }
   }
+  cout << "There are " << cnt << " 'th's." << endl;
 }
 
 bool occurence(char read[], char th[])
 {
-  int *pos;
+  char *pos;
 
   pos = (strstr(read, th));
   if (pos)
   {
     return true;
   }
-
 }
 
 
