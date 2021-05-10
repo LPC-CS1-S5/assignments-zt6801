@@ -46,7 +46,10 @@ int main()
 
 bool occurence(char read[], char th[])
 {
-  if(strstr(read, th) == 0)
+  int *pos;
+
+  pos = (strstr(read, th));
+  if (pos)
   {
     return true;
   }
