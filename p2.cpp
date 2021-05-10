@@ -17,15 +17,18 @@ int main()
 {
   char email[20];
 
-  if (ABC(email))
+  cout << "Please enter your email: " << endl;
+  cin >> email;
+
+  if (ABC(email)) // this is right
   {
     cout << "Your email starts with alphabet letters" << endl;
   }
-  if(len(email))
+  if(len(email))  // this is worng
   {
     cout << "Your email is between 6-14 letters" << endl;
   }
-  if (domname(email))
+  if (domname(email)) // this is wrong
   {
     cout << "Your email has the right domain name" << endl;
   }
@@ -48,20 +51,33 @@ bool len(char email[])
   int i = 0;
   while (email[i] != '@')
   {
-    if ((strlen(email) > 5) && (strlen(email) < 15))
+    i++;
+  }
+  if ((i >5) && (i < 15))
     {
       return true;
     }
     else
     {
       cout << "Your email is not within 6-14, sorry." << endl;
+      return false;
     }
-    break;
   }
-}
 
 bool domname(char email[])
 {
   char domains[] = "com, org, edu, net, gov";
-  
+  int j = (strlen(email));
+  for (int i = 0; i < j; i++)
+  {
+    if(strcmp(domains, email))
+    {
+      return true;
+    }
+    else
+    {
+      cout << "Sorry... please end your email with a domain." << endl;
+      return false;
+    }
+  }
 }
