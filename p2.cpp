@@ -46,20 +46,22 @@ bool ABC(char email[])
 bool len(char email[])
 {
   int i = 0;
-  if(ispunct(email))
+  while (email[i] != '@')
   {
-    
+    if ((strlen(email) > 5) && (strlen(email) < 15))
+    {
+      return true;
+    }
+    else
+    {
+      cout << "Your email is not within 6-14, sorry." << endl;
+    }
+    break;
   }
-  while (email != '@')
-  {
-    i++;
-  }
-  if ((i > 5) && (i < 15))
-  {
-    return true;
-  }
-  else
-  {
-    cout << "Your email is not within 6-14 long, sorry!" << endl;
-  }
+}
+
+bool domname(char email[])
+{
+  char domains[] = "com, org, edu, net, gov";
+  
 }
