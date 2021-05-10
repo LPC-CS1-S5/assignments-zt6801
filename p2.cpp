@@ -42,3 +42,24 @@ bool ABC(char email[])
     cout << "Your email does not start with a letter, sorry." << endl;
   }
 }
+
+bool len(char email[])
+{
+  int i = 0;
+  if(ispunct(email))
+  {
+    
+  }
+  while (email != '@')
+  {
+    i++;
+  }
+  if ((i > 5) && (i < 15))
+  {
+    return true;
+  }
+  else
+  {
+    cout << "Your email is not within 6-14 long, sorry!" << endl;
+  }
+}
