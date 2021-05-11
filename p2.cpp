@@ -20,17 +20,25 @@ int main()
   cout << "Please enter your email: " << endl;
   cin >> email;
 
-  if (ABC(email)) // this is right
+  if (ABC(email)) 
   {
-    cout << "Your email starts with alphabet letters" << endl;
+    cout << "Great! Your email starts with alphabetical letters" << endl;
   }
-  if(len(email))  // this is worng
+  if(len(email)) 
   {
-    cout << "Your email is between 6-14 letters" << endl;
+    cout << "Great! The length of your email is between 6-14" << endl;
   }
-  if (domname(email)) // this is wrong
+  if (domname(email))
   {
-    cout << "Your email has the right domain name" << endl;
+    cout << "Great! You ended your email with the right domain" << endl;
+  }
+  if ((ABC(email)) && (len(email)) && (domname(email)))
+  {
+    cout << "Congratulations. Your email is valid." << endl;
+  }
+  else
+  {
+    cout << "Sorry. Your email is not valid." << endl;
   }
 }
 
@@ -43,6 +51,7 @@ bool ABC(char email[])
   else
   {
     cout << "Your email does not start with a letter, sorry." << endl;
+    return false;
   }
 }
 
@@ -70,7 +79,7 @@ bool domname(char email[])
   int j = (strlen(email));
   for (int i = 0; i < j; i++)
   {
-    if(strcmp(domains, email))
+    if(strstr(domains, email) == 0)
     {
       return true;
     }
