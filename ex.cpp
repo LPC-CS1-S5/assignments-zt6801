@@ -1,3 +1,9 @@
+// We are going to make a program that checks the validity of the email accounts. The requirement of an email account is as follows: emailid@organization.com
+// The id of the email must be starting with the alphabet characters
+//The length of id must be greater than 5 and less than 15
+//The domain name should be one of the list {com, org, edu, net, and gov}
+//The program asks for the user email string and then split the id, organization name, and domain name. After that, check the validity of the email string base on the above requirements.
+
 #include <iostream>
 #include <cctype>
 #include <cstring>
@@ -14,7 +20,18 @@ int main()
   cout << "Please enter your email: " << endl;
   cin >> email;
 
-  
+  if (ABC(email)) 
+  {
+    cout << "Great! Your email starts with alphabetical letters" << endl;
+  }
+  if(len(email)) 
+  {
+    cout << "Great! The length of your email is between 6-14" << endl;
+  }
+  if (domname(email))
+  {
+    cout << "Great! You ended your email with the right domain" << endl;
+  }
   if ((ABC(email)) && (len(email)) && (domname(email)))
   {
     cout << "Congratulations. Your email is valid." << endl;
@@ -33,6 +50,7 @@ bool ABC(char email[])
   }
   else
   {
+    cout << "Your email does not start with a letter, sorry." << endl;
     return false;
   }
 }
@@ -50,23 +68,26 @@ bool len(char email[])
     }
     else
     {
+      cout << "Your email is not within 6-14, sorry." << endl;
       return false;
     }
   }
 
 bool domname(char email[])
 {
-  char domains[] = "com, org, edu, net, gov";
+  char domains[] = "com org edu net gov";
   int j = (strlen(email));
-  for (int i = 0; i < j; i++)
+  char *p;
+
+  while (email != NULL)
+  p = (strstr(domains, email));
+  if (p)
   {
-    if(strcmp(domains, email) == 0)
-    {
-      return true;
-    }
-    else
-    {
-      return false;
-    }
+    return true;
   }
-}
+  else
+  {
+    cout << "Sorry man.." << endl;
+    return false;
+  }
+ }
