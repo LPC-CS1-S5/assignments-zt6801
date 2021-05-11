@@ -75,18 +75,22 @@ bool len(char email[])
 
 bool domname(char email[])
 {
-  char domains[] = "com, org, edu, net, gov";
+  char domains[] = "com org edu net gov";
   int j = (strlen(email));
-  for (int i = 0; i < j; i++)
+  char *p;
+
+  while (email[j-4] == '.')
   {
-    if(strstr(domains, email) == 0)
-    {
-      return true;
-    }
-    else
-    {
-      cout << "Sorry... please end your email with a domain." << endl;
-      return false;
-    }
+    p = (strstr(domains, email));
+    break;
+  }
+  if (p)
+  {
+    return true;
+  }
+  else
+  {
+    cout << "Sorry... please end your email with a domain." << endl;
+    return false;
   }
 }
