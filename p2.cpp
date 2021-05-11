@@ -75,18 +75,18 @@ bool len(char email[])
 
 bool domname(char email[])
 {
-  char domains[] = "com org edu net gov";
+  char domains[20] = "com org edu net gov";
   int len = (strlen(email));
   char *p;
+  int i = len - 1; 
 
-  for(int i = len-1; i > 0; i--)
-  {
-    if (email[i] == '.')
+  do{
+    if(email[i] == '.')
     {
       break;
     }
-  }
-  p = (strstr(domains, email));
+  } while ((i--) > 0);
+  p = (strstr(domains, email+i+1));
   if (p)
   {
     return true;
