@@ -24,6 +24,7 @@ int makeStructArray(Employee[]);
 void richEmployee(Employee[], int);
 // Find the employee that works in the “Computer” department.
 void findComputer(Employee[], int);
+void printout(Employee emp);
 
 // [5] Make the main function that drives your functions.
 int main()
@@ -33,8 +34,7 @@ int main()
 
   numofEmployees = makeStructArray(emp);
   cout << "There are " << numofEmployees << " employees." << endl;
-  // printout?
-
+  printout(emp[numofEmployees], numofEmployees);
   cout << "The employee or employees with salaries greater than $100,000 is/are: " << endl;
   richEmployee(emp, numofEmployees);
   cout << "The employee or employees working within the Computer department is/ are: " << endl;
@@ -82,4 +82,17 @@ void findComputer(Employee emp[], int numofEmployees) // Find the employee that 
       cout << emp[i].firstname << " " << emp[i].lastname << endl;
     }
   }
+}
+
+void printout(Employee emp)
+{
+  cout << emp.ID << "\t";
+	cout << emp.firstname << "\t";
+  cout << emp.lastname << "\t";
+	cout << emp.salary << "\t";
+	cout << emp.department << "\t\t";
+	cout << emp.month << "\t";
+  cout << emp.day << "\t";
+  cout << emp.year << endl;
+
 }
