@@ -1,5 +1,6 @@
 123456 John Doe 140000 Computer Jan 31 2020
-146789 James Smith 13000 Marketing Mar 5 2020
+146789 James Smith 130000 Marketing Mar 5 2020
 123984 Jennifer Miller 98000 Production May 22 2002
 543098 Joseph Jones 100000 Accounting April 7 2019
 987236 Matthew Garcia 93000 Research February 9 2018
+723647 Eric Song 69123 Computer June 25 2020

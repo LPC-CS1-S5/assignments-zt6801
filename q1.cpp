@@ -35,9 +35,10 @@ int main()
   cout << "There are " << numofEmployees << " employees." << endl;
   // printout?
 
+  cout << "The employee or employees with salaries greater than $100,000 is/are: " << endl;
   richEmployee(emp, numofEmployees);
-
-
+  cout << "The employee or employees working within the Computer department is/ are: " << endl;
+  findComputer(emp, numofEmployees);
 }
 
 int makeStructArray(Employee emp[])
@@ -67,7 +68,18 @@ void richEmployee(Employee emp[], int numofEmployees) // salary greater than 100
   {
     if (emp[i].salary > 100000)
     {
-      cout << emp[i].firstname << emp[i].lastname << endl;
+      cout << emp[i].firstname << " " << emp[i].lastname << endl;
+    }
+  }
+}
+
+void findComputer(Employee emp[], int numofEmployees) // Find the employee that works in the “Computer” department.
+{
+  for (int i = 0; i < numofEmployees; i++)
+  {
+    if (emp[i].department == "Computer")
+    {
+      cout << emp[i].firstname << " " << emp[i].lastname << endl;
     }
   }
 }
