@@ -32,6 +32,10 @@ int main()
   int numofEmployees = 0;
 
   numofEmployees = makeStructArray(emp);
+  cout << "There are " << numofEmployees << " employees." << endl;
+  // printout?
+
+  richEmployee(emp, numofEmployees);
 
 
 }
@@ -52,8 +56,18 @@ int makeStructArray(Employee emp[])
     while (ifs >> emp[i].ID >> emp[i].firstname >> emp[i].lastname >> emp[i].salary >> emp[i].department >> emp[i].month >> emp[i].day >> emp[i].year)
     {
       i++;
-      cout << i;
     }
     return i;
+  }
+}
+
+void richEmployee(Employee emp[], int numofEmployees) // salary greater than 100,000
+{
+  for (int i = 0; i < numofEmployees; i++)
+  {
+    if (emp[i].salary > 100000)
+    {
+      cout << emp[i].firstname << emp[i].lastname << endl;
+    }
   }
 }
