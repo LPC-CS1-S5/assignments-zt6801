@@ -6,6 +6,7 @@ const int MAXSIZE = 1000;
 using namespace std;
 
 struct Employee {
+  int ID;
   string name;
   int salary;
   string department;
@@ -30,4 +31,25 @@ int main()
   numofEmployees = makeStructArray(emp);
 
 
+}
+
+int makeStructArray(Employee emp[])
+{
+  ifstream ifs;
+  int i = 0;
+  ifs.open("employee.txt");
+  if (!ifs)
+  {
+    cerr << "File Open Error" << endl;
+    exit(0);
+  }
+  if (ifs)
+  {
+    while (ifs >> emp[i].ID >> emp[i].name >> emp[i].salary >> emp[i].department >> emp[i].date)
+    {
+      i++;
+      cout << i << endl;
+    }
+  }
+  return i;
 }
