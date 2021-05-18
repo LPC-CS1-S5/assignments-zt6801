@@ -70,6 +70,7 @@ void richEmployee(Employee emp[], int numofEmployees) // salary greater than 100
   {
     if (emp[i].salary > 100000)
     {
+      // cout << emp[i].firstname << " " << emp[i].lastname << endl;
       printout(emp[i]);
     }
   }
@@ -81,6 +82,7 @@ void findComputer(Employee emp[], int numofEmployees) // Find the employee that 
   {
     if (emp[i].department == "Computer")
     {
+      // cout << emp[i].firstname << " " << emp[i].lastname << endl;
       printout(emp[i]);
     }
   }
@@ -88,12 +90,12 @@ void findComputer(Employee emp[], int numofEmployees) // Find the employee that 
 
 void printout(Employee emp)
 {
-    cout << "ID " << "\t\tName " << "\t\tSalary " << "Department " << "Month Day Year" << endl;
+    cout << "ID " << "\t\tName " << "\t\tSalary " << " Department " << "Month Day Year" << endl;
   cout << emp.ID << "\t";
 	cout << emp.firstname << " ";
   cout << emp.lastname << "\t";
 	cout << emp.salary << "\t";
-	cout << emp.department << "  ";
+	cout << emp.department << "   ";
 	cout << emp.month << "\t";
   cout << emp.day << "\t";
   cout << emp.year << endl;

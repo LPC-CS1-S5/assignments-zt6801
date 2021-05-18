@@ -4,3 +4,4 @@
 543098 Joseph Jones 100000 Accounting April 7 2019
 987236 Matthew Garcia 93000 Research February 9 2018
 723647 Eric Song 69123 Computer June 25 2020
+658765 Sanako Lo 90000 Finance May 17 2020
