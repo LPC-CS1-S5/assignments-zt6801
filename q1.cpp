@@ -7,10 +7,13 @@ using namespace std;
 
 struct Employee {
   int ID;
-  string name;
+  string firstname;
+  string lastname;
   int salary;
   string department;
-  int date;
+  string month;
+  int day;
+  int year;
 };
 
 // [2] Create the text file for the employee information “employee.txt” 
@@ -36,7 +39,7 @@ int main()
 int makeStructArray(Employee emp[])
 {
   ifstream ifs;
-  int i = 0;
+  int i;
   ifs.open("employee.txt");
   if (!ifs)
   {
@@ -45,11 +48,12 @@ int makeStructArray(Employee emp[])
   }
   if (ifs)
   {
-    while (ifs >> emp[i].ID >> emp[i].name >> emp[i].salary >> emp[i].department >> emp[i].date)
+    int i = 0;
+    while (ifs >> emp[i].ID >> emp[i].firstname >> emp[i].lastname >> emp[i].salary >> emp[i].department >> emp[i].month >> emp[i].day >> emp[i].year)
     {
       i++;
-      cout << i << endl;
+      cout << i;
     }
+    return i;
   }
-  return i;
 }
