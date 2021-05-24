@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cctype>
 #include <cstring>
+#include <sstream>
 using namespace std;
 
 int main ()
@@ -13,19 +14,23 @@ int main ()
 
   int N = words.length();
   int M = userinput.length();
-  char latin[N];
-  char userinarray[M];
-  
-  strcpy(latin, words.c_str());
-  strcpy(userinarray, userinput.c_str());
+  stringstream s(words);
+  string word;
 
-  char *pos;
-  pos = strstr(latin, userinarray);
-  if (pos)
+  int pos = 0, i = 0;
+
+  while (pos != 0)
   {
-    cout << "found" << endl;
+    while (s >> word)
+    {
+      pos = words.find(word, i);
+      if (pos)
+      {
+        cout << "Found at " << pos + 1 << " in " << endl;
+        i = pos + 1;
+      }
+    }
   }
-
 
 
 }
