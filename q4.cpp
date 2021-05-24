@@ -25,7 +25,7 @@ int main ()
       pos = words.find(userinput, i);
       if (pos)
       {
-        cout << "Found at " << pos + 1 << endl;
+        cout << "Found at " << pos + 1 << words.find(pos) << endl;
         i = pos + 1;
       }
     } while (pos != -1);
