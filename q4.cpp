@@ -22,14 +22,11 @@ int main ()
 
   do 
   {
-    while (s >> word)
-    {
-      pos = words.find(word, i);
+      pos = words.find(userinput, i);
       if (pos)
       {
-        cout << "Found at " << pos + 1 << " in " << word << endl;
+        cout << "Found at " << pos + 1 << endl;
         i = pos + 1;
       }
-    }
-  } while (pos != -1);
+    } while (pos != -1);
 }
