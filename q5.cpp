@@ -49,7 +49,17 @@ int main()
   g.score.grade;
 
   ofstream ofs;
-  
+  ofs.open("grades.bin");
+
+  for(int i = 0; i < 16; i++)
+  {
+    
+
+    ofs.write((char *)&g, sizeof(g));
+    cout << sizeof(g) << " bytes wrote to the file.\n";
+    ofs.close();
+  }
+
 
 
 }
