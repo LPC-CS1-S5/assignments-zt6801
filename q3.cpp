@@ -12,7 +12,11 @@ int main()
   {
     if (numbers1[i] == numbers2[i])
     {
-      cout << numbers1[i] << endl;
+      cout << "The numbers r the same";
+    }
+    else 
+    {
+      cout << "The numbesr r diff";
     }
   }
 }
