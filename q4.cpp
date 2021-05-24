@@ -4,6 +4,8 @@
 #include <sstream>
 using namespace std;
 
+bool findOccurence(string, int, string);
+
 int main ()
 {
   string  userinput;
@@ -20,13 +22,25 @@ int main ()
   int pos = 0;
   int i = 0;
 
+  while (s>> word)
+  {
+    if (findOccurence(words, pos, userinput))
+    {
+      cout << "Found at " << pos + 1 << endl;
+      i = pos + 1;
+    }
+  }
+}
+
+bool findOccurence(string words, int pos, string userinput)
+{
+  int i = 0;
   do 
   {
       pos = words.find(userinput, i);
       if (pos)
       {
-        cout << "Found at " << pos + 1 << words.find(pos) << endl;
-        i = pos + 1;
+        return true;
       }
     } while (pos != -1);
 }
