@@ -24,7 +24,7 @@ int main ()
 
   while (s>> word)
   {
-    if (findOccurence(words, pos, userinput))
+    if (findOccurence(words, userinput))
     {
       cout << "Found at " << pos + 1 << endl;
       i = pos + 1;
