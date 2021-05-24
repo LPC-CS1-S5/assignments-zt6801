@@ -4,6 +4,8 @@
 #include <sstream>
 using namespace std;
 
+void findoccurence (string);
+
 int main ()
 {
   string  userinput;
@@ -14,10 +16,17 @@ int main ()
 
   int N = words.length();
   int M = userinput.length();
+
+  findoccurence(words);
+
+}
+
+void findoccurence(string words)
+{
   stringstream s(words);
   string word;
-
-  int pos = 0, i = 0;
+  int pos = 0;
+  int i = 0;
 
   while (pos != 0)
   {
@@ -31,6 +40,5 @@ int main ()
       }
     }
   }
-
 
 }
