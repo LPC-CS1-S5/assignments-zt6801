@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <sstream>
 using namespace std;
 
 const unsigned short N=5;
@@ -19,5 +20,36 @@ Grade g;
 
 int main()
 {
+  ifstream ifs;
+  string readline, buf;
+  stringstream ss;
+
+  ifs.open("grades.txt");
+  ifs >> readline;
+  ss << readline;
+
+  getline(ss, buf, ',');
+  g.first = buf;
+
+  getline(ss, buf, ',');
+  g.last = buf;
+
+  getline(ss, buf, ',');
+  g.ssn = stoi(buf);
+
+  int cnt = 0; 
+  for(int i = 0; i < 5; i++)
+  {
+    getline(ss, buf, ',');
+    g.score.sc[cnt];
+    cnt++;
+  }
+
+  getline(ss, buf, ',');
+  g.score.grade;
+
+  ofstream ofs;
   
+
+
 }
